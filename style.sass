@@ -1,0 +1,276 @@
+$dark: #000000
+$dark-bg: #343A40
+$light-dark: rgba(0,0,0,0.3)
+$light: #ffffff
+$light-bg: #eaeaea
+$main-color: #2C92CB
+$main-dark: #1F77A4
+$secondary-color: #FBD341
+
+@mixin inspect()
+    border: 1px solid red
+@mixin transition()
+    transition: all 0.2s linear
+@mixin perfectCenter()
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+@mixin txtShadow()
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+@mixin boxShadow()
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.25)
+@mixin radious()
+    border-radius: 8px
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap')
+
+*, *::before, *::after
+    box-sizing: border-box
+*
+    padding: 0
+    margin: 0
+
+html
+    scroll-behavior: smooth
+body
+    font-family: 'Poppins', sans-serif
+
+.container
+    padding-left: 20px
+    padding-right: 20px
+    margin: auto
+    width: 100%
+a
+    text-decoration: none
+    display: inline-block
+    color: $dark
+ul
+    list-style: none
+img
+    max-width: 100%
+    height: auto
+    display: block
+h2
+    text-align: center
+    margin-bottom: 0.5rem
+
+.header
+    padding: 0.5rem 0
+    border-bottom: 2px solid $main-dark
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 100
+    // background: rgba(255,255,255,1)
+    background: $dark-bg
+    .nav
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-wrap: wrap
+        li
+            a
+                color: $light
+                padding: 10px 15px
+                position: relative
+                font-size: 1.1rem
+                @include transition()
+                &::before, &::after
+                    position: absolute
+                    top: 50%
+                    font-size: 1.7rem
+                    font-family: 'Odibee Sans', cursive
+                    text-align: center
+                    color: $main-color
+                    transform: translateY(-50%)
+                    opacity: 0
+                    height: 100%
+                    @include transition()
+                    @include perfectCenter()
+                &::before
+                    content: '<'
+                    left: 13px
+                &::after
+                    content: '>'
+                    right: 13px
+
+                &:hover
+                    &::before, &::after
+                        opacity: 1
+                    &::before
+                        left: 0
+                    &::after
+                        right: 0
+
+#about
+    padding: 6rem 0 0
+    margin-top: 2rem
+    max-width: 600px
+    margin-left: auto
+    margin-right: auto
+    text-align: justify
+    h2
+        color: $dark-bg
+
+#skills
+    padding: 4rem 0 0
+    h2
+        color: $dark-bg
+    ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        li
+            margin: 0.5rem
+            padding: 0.5rem
+            width: 150px
+            position: relative
+            color: $light
+            background: $main-color
+            background: $main-dark
+            text-align: center
+            @include radious()
+            &:nth-child(even)
+                background: $dark-bg
+            &::before, &::after
+                position: absolute
+                top: 50%
+                font-size: 1.7rem
+                font-family: 'Odibee Sans', cursive
+                text-align: center
+                color: $light
+                transform: translateY(-50%)
+                height: 100%
+                @include transition()
+                @include perfectCenter()
+            &::before
+                content: '<'
+                left: 13px
+            &::after
+                content: '>'
+                right: 13px
+
+#portfolios
+    margin-top: 2rem
+    width: 100%
+    min-height: 100vh
+    background: url(images/cool-background.svg) no-repeat center/cover
+    background-color: $light
+    background-color: #C7E1F3
+    padding: 2rem 0
+    h2
+        color: $dark
+        color: $light
+        padding-top: 3rem
+        @include txtShadow()
+    .container
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        .portfolio
+            width: 400px
+            margin: 2rem
+            &>*
+                margin: 1rem 0
+            h3
+                text-align: center
+                color: $light
+                font-weight: normal
+                @include txtShadow()
+
+            img
+                filter: drop-shadow(0 0 10px rgba(0,0,0,0.5))
+            .buttons
+                display: flex
+                align-items: center
+                justify-content: center
+                &>*
+                    margin: 0 1rem
+.btn
+    padding: 10px
+    background: $dark-bg
+    font-size: 0.8rem
+    color: $light
+    background: $main-dark
+    text-align: center
+    // text-transform: uppercase
+    @include txtShadow()
+    @include boxShadow()
+    @include transition()
+    @include radious()
+    &:nth-child(even)
+        background: $dark-bg
+    &:hover
+        transform: scale(1.05)
+    &:active
+        transform: scale(1.03)
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.5)
+
+.contact
+    background: $dark-bg
+    padding: 1rem 0
+    h2
+        color: $light
+        text-align: center
+    &-box
+        @include perfectCenter()
+        &>*
+            // margin: 1rem
+            color: $light
+        .contact-tel-mail
+            text-align: center
+            p
+                margin: 1rem 0
+            a
+                color: lighten($main-color,15%)
+                @include transition()
+                &:hover
+                    color: $light
+                    text-decoration: underline
+    .buttons
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        .btn
+            margin: 1rem
+            color: $light
+            width: 150px
+            text-align: center
+            @include perfectCenter()
+            img
+                margin-top: 0.5rem
+                width: 50px
+            &:last-child(even)
+                background: $light-dark
+
+footer
+    text-align: center
+    background: $dark-bg
+    color: $light
+    padding: 1.5rem
+    font-size: 0.8rem
+    .btn
+        margin-bottom: 0.5rem
+
+@media (min-width: 576px)
+    .container
+        max-width: 540px
+        padding-right: 15px
+        padding-left: 15px
+
+@media (min-width: 768px)
+    .container
+        max-width: 720px
+    #about
+        padding: 4rem 0 0
+
+@media (min-width: 992px)
+    .container
+        max-width: 960px
+
+@media (min-width: 1200px)
+    .container
+        max-width: 1140px
