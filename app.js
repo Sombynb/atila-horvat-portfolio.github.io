@@ -8,6 +8,12 @@ copyYear.innerText = new Date().getFullYear();
 
 const portfolioArray = [
     {
+        name: 'Fruits website',
+        image: 'images/web-9.jpg',
+        pageLink: 'https://sombynb.github.io/Fruits-website.github.io/',
+        codeLink: 'https://github.com/Sombynb/Fruits-website.github.io'
+    },
+    {
         name: 'Space-x clone',
         image: 'images/web1.gif',
         pageLink: 'https://sombynb.github.io/Spece-x-clone.github.io/',
