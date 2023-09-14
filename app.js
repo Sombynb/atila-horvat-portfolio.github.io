@@ -13,48 +13,63 @@ const portfolioArray = [
         pageLink: 'https://sombynb.github.io/Fruits-website.github.io/',
         codeLink: 'https://github.com/Sombynb/Fruits-website.github.io'
     },
+
+    {
+        name: 'Responsible Real State',
+        image: 'images/web-10.jpg',
+        pageLink: 'https://sombynb.github.io/Real-state.github.io/',
+        codeLink: 'https://github.com/Sombynb/Real-state.github.io'
+    },
+
     {
         name: 'Space-x clone',
         image: 'images/web1.gif',
         pageLink: 'https://sombynb.github.io/Spece-x-clone.github.io/',
         codeLink: 'https://github.com/Sombynb/Spece-x-clone.github.io'
     },
+
     {
         name: 'Starbacks clone',
         image: 'images/web2.png',
         pageLink: 'https://sombynb.github.io/Starbucks-clone.github.io/',
         codeLink: 'https://github.com/Sombynb/Starbucks-clone.github.io'
     },
+
     {
         name: 'Hulu clone',
         image: 'images/web-3.jpg',
         pageLink: 'https://sombynb.github.io/Hulu-clone.github.io/',
         codeLink: 'https://github.com/Sombynb/Hulu-clone.github.io'
     },
+
     {
         name: 'Travel website clone',
         image: 'images/web-4.jpg',
         pageLink: 'https://sombynb.github.io/Travel-website-clone.github.io/',
         codeLink: 'https://github.com/Sombynb/Travel-website-clone.github.io'
     },
+
     {
         name: 'Watches website clone',
         image: 'images/web-5.jpg',
         pageLink: 'https://sombynb.github.io/Watches-website-clone.github.io/',
         codeLink: 'https://github.com/Sombynb/Watches-website-clone.github.io'
     },
+
     {
         name: 'Plant website clone',
         image: 'images/web-6.jpg',
         pageLink: 'https://sombynb.github.io/Plants-website-clone.github.io/',
         codeLink: 'https://github.com/Sombynb/Plants-website-clone.github.io'
     },
+
     {
         name: 'Restaurant website clone',
         image: 'images/web-7.jpg',
         pageLink: 'https://sombynb.github.io/Restaurant-clone.github.io/',
         codeLink: 'https://github.com/Sombynb/Restaurant-clone.github.io'
     },
+
     {
         name: 'Headphones landing page',
         image: 'images/web-8.jpg',
